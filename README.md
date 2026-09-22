@@ -1,32 +1,18 @@
-# Sistema de Cadastro de Usuários
+# 🚀 API REST de Cadastro de Usuários (Backend Python)
 
-Sistema CRUD desenvolvido em Python com interface gráfica usando Tkinter e banco de dados SQLite.
+> API desenvolvida em Python com Flask e PostgreSQL, aplicando padrões de arquitetura de mercado, segurança contra SQL Injection e tratamento robusto de erros.
 
-## Funcionalidades
+## 🛠️ Tecnologias Utilizadas
 
-- Cadastro de usuários
-- Listagem de usuários
-- Atualização de dados
-- Exclusão de usuários
-- Interface gráfica intuitiva
-- Armazenamento em banco de dados SQLite
+* **Python 3.x**
+* **Flask** (Framework Web / API REST)
+* **PostgreSQL** (Banco de dados relacional)
+* **Psycopg2** (Driver de conexão Python-PostgreSQL)
+* **Python-Dotenv** (Gerenciamento seguro de variáveis de ambiente)
 
-## Tecnologias Utilizadas
+## ⚙️ Como Executar o Projeto
 
-- Python 3
-- Tkinter
-- SQLite3
-
-Execute o sistema:
-python app.py
-
-## Objetivo do Projeto
-
-Projeto criado para praticar:
-
-- CRUD
-- Banco de dados
-- Interface gráfica
-- Organização de código
-- Programação em Python
-
+1. **Clone o repositório:**
+   ```bash
+   git clone <url-do-seu-repositorio>
+   cd api_cadastro
