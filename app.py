@@ -12,15 +12,14 @@ app = Flask(__name__)
 
 def get_db_connection():
     """
-    Função utilitária para abrir uma conexão com o banco de dados PostgreSQL.
-    Padrão Sênior: Centralizar a conexão evita repetição de código e facilita a manutenção.
+    Abre uma conexão com o PostgreSQL usando as variáveis de ambiente para configuração do banco de dados.
     """
     try:
         connection = psycopg2.connect(
             host=os.getenv("DB_HOST", "localhost"),
-            database=os.getenv("DB_NAME", "sistema_db")
-            user=os.getenv("DB_USER", "postgres")
-            password=os.getnv("DB_PASSWORD" "")
+            database=os.getenv("DB_NAME", "sistema_db"),
+            user=os.getenv("DB_USER", "postgres"),
+            password=os.getenv("DB_PASSWORD", ""),
         )
         return connection
     except Error as e:
