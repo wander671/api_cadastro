@@ -17,7 +17,7 @@ def get_db_connection():
     try:
         connection = psycopg2.connect(
             host=os.getenv("DB_HOST", "localhost"),
-            database=os.getenv("DB_NAME", "sistema_db"),
+            database=os.getenv("DB_NAME", "api_cadastro_db"),
             user=os.getenv("DB_USER", "postgres"),
             password=os.getenv("DB_PASSWORD", ""),
         )
@@ -25,3 +25,13 @@ def get_db_connection():
     except Error as e:
         print(f"Erro ao conectar ao PostgreSQL: {e}")
         return None
+
+# =====================================================
+# ROTA PRINCIPAL - VERIFICAR SE A API ESTÀ FUNCIONANDO 
+# ===================================================== 
+@app.route("/")
+def home():
+    return jsonify({"mensagem": "API de cadastro funcionando!"})
+
+if __name__== "__main__":
+    app.run(debug=True)
